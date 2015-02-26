@@ -50,6 +50,9 @@ THE SOFTWARE.
 					case 'litecoin': 
 						$response = get_litecoin($address);
 						break;
+					case 'artsycoin': 
+						$response = get_artsycoin($address);
+						break;
 				}
 				$responses[$instance] = $response;
 			}
@@ -79,6 +82,19 @@ THE SOFTWARE.
 		  	$return += array(
 				'count' => (int) parse($data,'Transactions in: ','<br />'),
 				'amount' => (float) parse($data,'Received: ','<br />')
+			);
+		  	return $return;
+		}
+	}
+
+	function get_artsycoin($address) {
+		$return = array();
+		$data = get_request('http://blockexperts.com/api?coin=bsy&action=getbalance&address='.$address);
+		$data2 = get_request('http://blockexperts.com/api?coin=bsy&action=getbalance&address='.$address);
+		if (!empty($data)) {
+			$return += array(
+				'count' => 'n/a',
+				'amount' => (float) $data
 			);
 		  	return $return;
 		}
