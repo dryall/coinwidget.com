@@ -90,10 +90,9 @@ THE SOFTWARE.
 	function get_artsycoin($address) {
 		$return = array();
 		$data = get_request('http://blockexperts.com/api?coin=bsy&action=getbalance&address='.$address);
-		$data2 = get_request('http://blockexperts.com/api?coin=bsy&action=getbalance&address='.$address);
 		if (!empty($data)) {
 			$return += array(
-				'count' => 'n/a',
+				'count' => '?',
 				'amount' => (float) $data
 			);
 		  	return $return;
