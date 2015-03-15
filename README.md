@@ -1,11 +1,13 @@
 coinwidget.com
 ==============
 
-*The Bitcoin and Litecoin Donation Button*
+*The ArtsyCoin (and Bitcoin and Litecoin) Donation Button*
 
 Visit http://coinwidget.com/ for full documentation, demo, and a link code wizard.
 
 CoinWidget was created by http://scotty.cc/ (hire me for your next project!)
+
+This fork was created by the ArtsyCoin team: http://artsycoin.com
 
 Released under the Open Source **MIT License** (see **LICENSE** file for details).
 
@@ -21,7 +23,7 @@ Donations are welcome and will go towards further development of this project as
 
 Installation
 ==============
-A. Grab the latest version from GitHub: https://github.com/scottycc/coinwidget.com
+A. Grab the latest version from GitHub
 
 B. Open **widget/coin.js** and find:
 
